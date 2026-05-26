@@ -22,6 +22,7 @@ import * as path from "node:path";
 import yaml from "js-yaml";
 
 import { ALL_TOOLS } from "./tools.js";
+import "./schema-patch.js";
 
 type TextBlock = { type: "text"; text: string };
 
