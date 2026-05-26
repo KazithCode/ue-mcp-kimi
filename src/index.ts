@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// Patch DEVE vir antes de qualquer import do @modelcontextprotocol/sdk
+import "./schema-patch.js";
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -22,7 +25,6 @@ import * as path from "node:path";
 import yaml from "js-yaml";
 
 import { ALL_TOOLS } from "./tools.js";
-import "./schema-patch.js";
 
 type TextBlock = { type: "text"; text: string };
 
